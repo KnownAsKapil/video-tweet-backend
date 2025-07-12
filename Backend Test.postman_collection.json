@@ -1,0 +1,1202 @@
+{
+	"info": {
+		"_postman_id": "f4f73e94-5be2-4043-b949-edba534338a0",
+		"name": "Backend Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46460251",
+		"_collection_link": "https://kapil-8219684.postman.co/workspace/Kapil's-Workspace~aec3e944-eb44-443d-85c4-b75a918f3a57/collection/46460251-f4f73e94-5be2-4043-b949-edba534338a0?action=share&source=collection_link&creator=46460251"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fullname",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "12@gmail",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"description": "Put a file here (mandatory)",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "coverImage",
+									"description": "Optional",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server 8k}}/users/register",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"123@gmail\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/users/login",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"123@gmail\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/users/logout",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get channel profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/users/c/2",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"users",
+								"c",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Watch History",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/users/history",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"users",
+								"history"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Post comment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\" Great Video \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/comments/68711a483033325f4f7848b2",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"comments",
+								"68711a483033325f4f7848b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/comments/68711a483033325f4f7848b2",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"comments",
+								"68711a483033325f4f7848b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/comments/c/6871213f766a7bc0ea5774a1",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"comments",
+								"c",
+								"6871213f766a7bc0ea5774a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newContent\": \"Best Video\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/comments/c/6871218e766a7bc0ea5774a8",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"comments",
+								"c",
+								"6871218e766a7bc0ea5774a8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "Stats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/dashboard/stats",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"dashboard",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/dashboard/videos",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"dashboard",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "Toggle video Likes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server 8k}}/likes/toggle/v/68711a483033325f4f7848b2",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"v",
+								"68711a483033325f4f7848b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Comment Likes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/likes/toggle/c/6871213f766a7bc0ea5774a1",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"c",
+								"6871213f766a7bc0ea5774a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Tweet Likes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/likes/toggle/t/68712732df0813cd5b4f0840",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"t",
+								"68712732df0813cd5b4f0840"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get liked Videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/likes/videos",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"likes",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Videos",
+			"item": [
+				{
+					"name": "Toggle Video Publish",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/videos/toggle/publish/68711a483033325f4f7848b2",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"videos",
+								"toggle",
+								"publish",
+								"68711a483033325f4f7848b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Videos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/videos/68711a483033325f4f7848b2",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"videos",
+								"68711a483033325f4f7848b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/videos/?query=raw",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"videos",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "raw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish A Video",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Testing Video",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "New Video",
+									"type": "text"
+								},
+								{
+									"key": "videoFile",
+									"description": "Put a file here ( mandatory )",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "thumbnail",
+									"description": "Put a file here ( mandatory )",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server 8k}}/videos/",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"videos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Video By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/videos/68711a483033325f4f7848b2",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"videos",
+								"68711a483033325f4f7848b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Details of Video",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Update Video #1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Updated Description",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"description": "Put a file here (mandatory)",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Server 8k}}/videos/68711a483033325f4f7848b2",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"videos",
+								"68711a483033325f4f7848b2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HealthCheck",
+			"item": [
+				{
+					"name": "Check Website Health",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/healthcheck/",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"healthcheck",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tweet",
+			"item": [
+				{
+					"name": "Tweet",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Hello guys I published my first tweet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/tweets/",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"tweets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Tweets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/tweets/user/6867fb3ce3bc0f92ad81b549",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"tweets",
+								"user",
+								"6867fb3ce3bc0f92ad81b549"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Tweet",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Hello guys I edited my tweet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/tweets/68712732df0813cd5b4f0840",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"tweets",
+								"68712732df0813cd5b4f0840"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tweet",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/tweets/68712732df0813cd5b4f0840",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"tweets",
+								"68712732df0813cd5b4f0840"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "Toggle Subscription",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/subscriptions/c/6867fb3ce3bc0f92ad81b549",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"subscriptions",
+								"c",
+								"6867fb3ce3bc0f92ad81b549"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Subscribed Channels",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/subscriptions/u/6867fb3ce3bc0f92ad81b549",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"subscriptions",
+								"u",
+								"6867fb3ce3bc0f92ad81b549"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User channels Subscribers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Server 8k}}/subscriptions/c/6867fb3ce3bc0f92ad81b549",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"subscriptions",
+								"c",
+								"6867fb3ce3bc0f92ad81b549"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Playlist",
+			"item": [
+				{
+					"name": "Create Playlist",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New PlayList1\",\r\n    \"description\":\"Making a new playlist\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/playlist/",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"playlist",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Playlist by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/playlist/687130ceb49e3e4b3756a900",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"playlist",
+								"687130ceb49e3e4b3756a900"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Playlist Name and description",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Newer Playlist\",\r\n    \"description\": \"Best Videos out here\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/playlist/68712e64594596a488dae266",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"playlist",
+								"68712e64594596a488dae266"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Playlist",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/playlist/68712ffcb49e3e4b3756a8e0",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"playlist",
+								"68712ffcb49e3e4b3756a8e0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Playlist By UserId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/playlist/user/6867fb3ce3bc0f92ad81b549",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"playlist",
+								"user",
+								"6867fb3ce3bc0f92ad81b549"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Video in Playlist by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/playlist/add/68711a483033325f4f7848b2/68712ffcb49e3e4b3756a8e0",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"playlist",
+								"add",
+								"68711a483033325f4f7848b2",
+								"68712ffcb49e3e4b3756a8e0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Video from playlist",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Server 8k}}/playlist/remove/68711a483033325f4f7848b2/68712ffcb49e3e4b3756a8e0",
+							"host": [
+								"{{Server 8k}}"
+							],
+							"path": [
+								"playlist",
+								"remove",
+								"68711a483033325f4f7848b2",
+								"68712ffcb49e3e4b3756a8e0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
