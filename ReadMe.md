@@ -203,6 +203,4 @@ Server 8k = http://localhost:8000/api/v1
 
 ---
 
-## License
 
-MIT © M. Surya Kapil
